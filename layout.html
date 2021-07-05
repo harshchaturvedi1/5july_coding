@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>layout</title>
+    <style>
+        .block-1{
+            display: flex;
+            justify-content: center;
+            font-family: sans-serif;
+            color:white;
+            /* border: 1px solid blue; */
+        }
+        .box{
+            /* border: 1px solid red; */
+            margin: 20px;
+            width: 30%;
+            border-radius: 20px;
+        }
+        .box > a{
+            float: left;
+            margin: 10px;
+            padding: 10px;
+        }
+        a img{
+            border-radius: 60px;
+        }
+        .box:nth-child(1){
+            background-color: rgba(255, 166, 0, 0.658);
+        }
+        .box:nth-child(2){
+            background-color: rgba(35, 35, 245, 0.822);
+        }
+        .box:nth-child(3){
+            background-color: rgba(75, 75, 218, 0.452);
+        }
+        .box span{
+            font-size: 25px;
+        }
+        .block-2{
+            display: grid;
+            height: 130px;
+            /* border: 1px solid red; */
+            justify-content: center;
+            align-items: center;
+        }
+        .block-2 span{
+            /* border: 1px solid blue; */
+            margin: 15px;
+            padding: 7px 30px 1px 30px;
+            font-size: 1.5rem;
+        }
+        .items>span:nth-child(1){
+            background-color: rgba(89, 89, 250, 0.658);
+            color: white;
+        } 
+        .block-2 h1{
+            margin: auto;
+            font-size: 3em;
+            /* font-weight: 600; */
+            color: rgb(76, 0, 255);
+            margin-top: 10px;
+        }
+        .container-3{
+            display: grid;
+            margin: 30px;
+            justify-content: center;
+            grid-template: "a b c";
+            grid-template-columns: 33% 33% 33%;
+        }
+        
+        .container-3 img{
+            border-radius: 15px;
+        }
+        .content{
+            width: 70%;
+        }
+        .content >p{
+            font-size: 20px;
+        }
+        .content > p:nth-child(3){
+            color: rgb(87, 87, 87);
+        }
+        button{
+            color: rgb(6, 188, 248);
+            border:1px solid rgb(6, 167, 221);
+            background-color: white;
+            border-radius: 5px;
+            width: 50%;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+        @media(max-width:870px){
+             .block-1{
+            display: flex;
+            flex-wrap: wrap;
+            }
+            .box{
+            margin: 3px;
+            /* padding: 10px; */
+            width: 70%;
+            height:175px;
+            border-radius: 10px;
+            text-align: center
+            }
+            .box > a{
+            float:none;
+            }
+            .box h1{
+                margin: 0px;
+            }
+
+           .container-3{
+                display: grid;
+                grid-gap: 20px;
+                grid-template: "a"
+                                "b"
+                                "c";
+                text-align: center;
+            }
+            .content{
+            width: 90%;
+            }
+            button{
+            width: 40%;
+            padding: 15px;
+            font-size: 1em;
+            }
+           
+            .block-2{
+            height: 100px;
+            }
+            .block-2 h1{
+                font-size: 2.5em;
+            }
+            .block-2 span{
+            margin: 1px;
+            padding: 0px 10px 0px 10px;
+            font-size: 1rem;
+            } 
+        }
+        @media (min-width:870px) and (max-width:1350px){
+            .block-1{
+            display: flex;
+            flex-wrap: wrap;
+            }
+            .box{
+            margin: 1%;
+            width: 40%;
+            border-radius: 20px;
+            }
+            .container-3{
+                display: grid;
+                grid-gap: 100px;
+                grid-template: "a b"
+                                "c d";
+                grid-template-columns: 40% 40%;
+            }
+            button{
+            width: 40%;
+            padding: 15px;
+            font-size: 1em;
+            }
+            .block-2{
+            height: 110px;
+            }
+            .block-2 span{
+            margin: 8px;
+            padding: 5px 20px 5px 20px;
+            font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="block-1">
+        <div class="box"> 
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/100" alt="image"></a> 
+            <h1>Scholarship</h1>
+            <span>Available</span>
+        </div>
+        <div class="box">
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/100" alt="image"></a>
+             <h1>Scholarship</h1>
+            <span>Available</span>
+        </div>
+        <div class="box">
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/100" alt="image"></a>
+             <h1>Scholarship</h1>
+            <span>Available</span>
+        </div>
+    </div>
+    <div class="block-2">
+        <h1>Popular Programs</h1>
+        <div class="items"> <span>Graduate</span><span>Postgraduate</span><span>PHD Scholarship</span><span>Training</span></div>
+    </div>
+    <div class="container-3">
+        <div class="block" id="first">
+            <img src="https://via.placeholder.com/400X250" alt="image">
+            <div class="content">
+                <p>Agriculture</p>
+                <h2>Chemical engineering</h2>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur obcaecati unde fugit qui atque dolores!</P>
+                <button>APPLY NOW</button>
+            </div>
+        </div>
+        <div class="block" id="first">
+            <img src="https://via.placeholder.com/400X250" alt="image">
+            <div class="content">
+                <p>Agriculture</p>
+                <h2>Chemical engineering</h2>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur obcaecati unde fugit qui atque dolores!</P>
+                <button>APPLY NOW</button>
+            </div>
+        </div>
+        <div class="block" id="first">
+            <img src="https://via.placeholder.com/400X250" alt="image">
+            <div class="content">
+                <p>Agriculture</p>
+                <h2>Chemical engineering</h2>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur obcaecati unde fugit qui atque dolores!</P>
+                <button>APPLY NOW</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
